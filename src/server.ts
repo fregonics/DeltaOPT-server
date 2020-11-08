@@ -1,10 +1,8 @@
 import express from 'express'
+import router from './routes'
 
 const app = express()
 
-app.get('/', (req, res) => {
-    return res.send('test')
-})
-
+app.use(router)
 
 app.listen(8080)
